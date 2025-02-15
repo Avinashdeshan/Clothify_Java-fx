@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="516.0" prefWidth="1275.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.register.RegisterFormController">
+   <children>
+      <ImageView fitHeight="517.0" fitWidth="997.0" layoutX="355.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/rrrr.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="1.0" arcWidth="30.0" fill="#ecc1b0" height="517.0" layoutX="-5.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="360.0" />
+      <JFXTextField fx:id="txtUsername" layoutX="54.0" layoutY="145.0" prefHeight="43.0" prefWidth="242.0" promptText="Username" />
+      <JFXTextField fx:id="txtEmail" layoutX="54.0" layoutY="205.0" prefHeight="43.0" prefWidth="242.0" promptText="Email" />
+      <JFXButton layoutX="54.0" layoutY="388.0" onAction="#btnRegisterOnAction" prefHeight="44.0" prefWidth="242.0" style="-fx-background-color: CD5C5C;" text="Register" textFill="WHITE">
+         <font>
+            <Font name="Eras Demi ITC" size="23.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="20.0" layoutY="25.0" prefHeight="66.0" prefWidth="310.0" text="Register Form" underline="true">
+         <font>
+            <Font name="Bell MT Bold" size="43.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtPassword" layoutX="54.0" layoutY="265.0" prefHeight="43.0" prefWidth="242.0" promptText="Password" />
+      <PasswordField fx:id="txtConfirmedPassword" layoutX="54.0" layoutY="324.0" prefHeight="43.0" prefWidth="242.0" promptText="Confirmed Password" />
+      <Label layoutX="85.0" layoutY="449.0" opacity="0.57" text="Already have an account?" />
+      <JFXButton layoutX="226.0" layoutY="447.0" onAction="#btnSigninOnAction" prefHeight="17.0" prefWidth="63.0" style="-fx-background-color: CD5C5C;" text="Sign in" textFill="WHITE">
+         <font>
+            <Font name="Eras Demi ITC" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controller.productmanagement.ProductFormController"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox spacing="15" alignment="CENTER" style="-fx-padding: 20; -fx-background-color: linear-gradient(to bottom, #ff9a9e, #fad0c4); -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: white; -fx-border-width: 2;">
+
+        <Label text="✨ Add New Product ✨"
+               style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);"/>
+
+        <TextField fx:id="txtName" promptText="🛍️ Product Name"
+                   style="-fx-pref-width: 270px; -fx-font-size: 14px; -fx-background-color: white; -fx-border-color: #ff758c; -fx-border-radius: 5; -fx-padding: 5;"/>
+
+        <ComboBox fx:id="cmbCategory" style="-fx-pref-width: 270px; -fx-font-size: 14px; -fx-background-color: white; -fx-border-color: #ff758c; -fx-border-radius: 5;">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="👗 Ladies"/>
+                    <String fx:value="👔 Gents"/>
+                    <String fx:value="👶 Kids"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+
+        <TextField fx:id="txtSize" promptText="📏 Size (e.g., S, M, L)"
+                   style="-fx-pref-width: 270px; -fx-font-size: 14px; -fx-background-color: white; -fx-border-color: #ff758c; -fx-border-radius: 5; -fx-padding: 5;"/>
+
+        <TextField fx:id="txtPrice" promptText="💰 Price (Rs.)"
+                   style="-fx-pref-width: 270px; -fx-font-size: 14px; -fx-background-color: white; -fx-border-color: #ff758c; -fx-border-radius: 5; -fx-padding: 5;"/>
+
+        <TextField fx:id="txtQuantity" promptText="📦 Quantity"
+                   style="-fx-pref-width: 270px; -fx-font-size: 14px; -fx-background-color: white; -fx-border-color: #ff758c; -fx-border-radius: 5; -fx-padding: 5;"/>
+
+        <Button text="➕ Add Product" onAction="#btnAddProductOnAction"
+                style="-fx-background-color: #ff758c; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-pref-width: 270px; -fx-background-radius: 5; -fx-border-radius: 5; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);"/>
+
+    </VBox>
+
+
+
+</AnchorPane>

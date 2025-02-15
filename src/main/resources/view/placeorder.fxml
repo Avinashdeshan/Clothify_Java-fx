@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="594.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.order.OrderFormController">
+   <children>
+      <Pane layoutX="27.0" layoutY="95.0" prefHeight="63.0" prefWidth="241.0" style="-fx-background-color: #7ea5c3;" styleClass="dpane_1" stylesheets="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/style.css">
+         <children>
+            <Label layoutX="14.0" layoutY="5.0" prefHeight="54.0" prefWidth="116.0" text="Order ID :" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtOrderID" editable="false" layoutX="121.0" layoutY="7.0" prefHeight="41.0" prefWidth="107.0" promptText="OR001" styleClass="user-input" stylesheets="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/style.css" />
+         </children>
+      </Pane>
+      <TableView fx:id="tblCart" layoutX="491.0" layoutY="95.0" prefHeight="417.0" prefWidth="528.0" styleClass="custom-table-view" stylesheets="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/style.css">
+         <columns>
+            <TableColumn fx:id="tblItemCode" prefWidth="78.0" text="Item Code" />
+            <TableColumn fx:id="tblItemName" prefWidth="126.0" text="Item Name" />
+            <TableColumn fx:id="tblQty" prefWidth="76.0" text="QTY" />
+            <TableColumn fx:id="tblPrice" prefWidth="119.0" text="Unit Price" />
+            <TableColumn fx:id="tblTotal" prefWidth="128.0" text="Total" />
+         </columns>
+      </TableView>
+      <JFXButton contentDisplay="TOP" layoutX="389.0" layoutY="283.0" onAction="#btnSearchItemOnAction" prefHeight="81.0" prefWidth="86.0" styleClass="search-btn" stylesheets="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/style.css" text="Search" textAlignment="CENTER">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/img/icons8-search-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="880.0" layoutY="518.0" onAction="#btnPlaceOrderOnAction" prefHeight="81.0" prefWidth="138.0" styleClass="search-btn" stylesheets="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/style.css" text="Place Order" textAlignment="CENTER">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="54.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/img/icons8-create-order-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Pane layoutX="27.0" layoutY="167.0" prefHeight="106.0" prefWidth="413.0" style="-fx-background-color: #7ea5c3;" styleClass="dpane_1" stylesheets="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/style.css">
+         <children>
+            <Label layoutX="11.0" prefHeight="54.0" prefWidth="132.0" text="Customer ID" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtCustName" layoutX="147.0" layoutY="47.0" prefHeight="41.0" prefWidth="186.0" styleClass="user-input" stylesheets="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/style.css" />
+            <JFXComboBox fx:id="txtCustID" layoutX="11.0" layoutY="55.0" onAction="#custIDonAction" prefHeight="33.0" prefWidth="86.0" />
+            <Label layoutX="159.0" prefHeight="54.0" prefWidth="174.0" text="Customer Name" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="333.0" layoutY="18.0" onAction="#supBtnSearchOnAction" prefHeight="70.0" prefWidth="70.0" text=".">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="54.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/img/serch1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="27.0" layoutY="283.0" prefHeight="312.0" prefWidth="313.0" style="-fx-background-color: #7ea5c3;" styleClass="dpane_1" stylesheets="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/style.css">
+         <children>
+            <Label layoutX="11.0" prefHeight="54.0" prefWidth="132.0" text="Item Code" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtItemName" layoutX="147.0" layoutY="41.0" prefHeight="41.0" prefWidth="149.0" styleClass="user-input" stylesheets="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/style.css" />
+            <JFXComboBox fx:id="txtItemCode" layoutX="18.0" layoutY="48.0" onAction="#itemCodeOnAction" prefHeight="33.0" prefWidth="86.0" />
+            <Label layoutX="159.0" prefHeight="54.0" prefWidth="138.0" text="Item Name" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="108.0" prefHeight="41.0" prefWidth="99.0" text="Unit Price  :" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="157.0" prefHeight="41.0" prefWidth="99.0" text="Size           :" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtUnitPrice" alignment="CENTER_RIGHT" layoutX="141.0" layoutY="108.0" prefHeight="41.0" prefWidth="99.0" text="0" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtSize" alignment="CENTER_RIGHT" layoutX="139.0" layoutY="157.0" prefHeight="41.0" prefWidth="99.0" text="0" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="210.0" prefHeight="41.0" prefWidth="99.0" text="QTY           :" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtQty" layoutX="157.0" layoutY="210.0" prefHeight="41.0" prefWidth="99.0" styleClass="user-input" stylesheets="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/style.css" />
+         </children>
+      </Pane>
+      <JFXButton contentDisplay="TOP" layoutX="389.0" layoutY="431.0" onAction="#btnAddItemOnAction" prefHeight="81.0" prefWidth="86.0" styleClass="search-btn" stylesheets="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/style.css" text="Add" textAlignment="CENTER">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/img/icons8-add-to-cart-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Pane layoutX="491.0" layoutY="518.0" prefHeight="81.0" prefWidth="295.0" style="-fx-background-color: #193d5d;" styleClass="dpane_1" stylesheets="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/style.css">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="54.0" prefWidth="116.0" text="Net TOtal  :" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="netTotal" alignment="CENTER_RIGHT" layoutX="148.0" layoutY="14.0" prefHeight="54.0" prefWidth="116.0" text="0" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="704.0" layoutY="20.0" prefHeight="41.0" prefWidth="325.0" style="-fx-background-color: #193d5d;" styleClass="dpane_1" stylesheets="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/style.css">
+         <children>
+            <Label layoutX="14.0" layoutY="-6.0" prefHeight="54.0" prefWidth="116.0" text="Date :" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtDate" alignment="CENTER_RIGHT" layoutX="92.0" layoutY="-6.0" prefHeight="54.0" prefWidth="206.0" text="2025/02/17" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="602.0" prefWidth="1415.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.dashboard.DashboardFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9a38e" height="603.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="254.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ecc1b0" height="603.0" layoutX="254.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="857.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d77852" height="78.0" layoutX="4.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="246.0" />
+      <Label alignment="CENTER" layoutY="20.0" prefHeight="66.0" prefWidth="246.0" text="Clothify Store" textFill="WHITE">
+         <font>
+            <Font name="Lucida Bright Demibold Italic" size="34.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="91.0" layoutY="144.0" onAction="#btnHomeOnAction" prefHeight="52.0" prefWidth="72.0" text="Home">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="41.0" layoutY="196.0" onAction="#btnAddSupplierOnAction" prefHeight="52.0" prefWidth="172.0" text="Manage Supplier">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="70.0" layoutY="300.0" onAction="#btnPlaceOrderOnAction" prefHeight="52.0" prefWidth="115.0" text="Place Order">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="26.0" layoutY="352.0" onAction="#btnProductDetailsOnAction" prefHeight="52.0" prefWidth="202.0" text="Product Management">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="59.0" layoutY="404.0" onAction="#btnOrderHistoryOnAction" prefHeight="52.0" prefWidth="135.0" text="Order History">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="602.0" fitWidth="406.0" layoutX="1033.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/kaylin-pacheco-2A-B6BiieEw-unsplash.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="79.0" layoutY="534.0" onAction="#btnLogoutOnAction" prefHeight="52.0" prefWidth="95.0" text="Log Out">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="41.0" layoutY="248.0" onAction="#btnAddEmployeeOnAction" prefHeight="52.0" prefWidth="172.0" text="Manage Employee">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane fx:id="loadDashboard" layoutX="269.0" layoutY="15.0" prefHeight="574.0" prefWidth="816.0" />
+   </children>
+</AnchorPane>

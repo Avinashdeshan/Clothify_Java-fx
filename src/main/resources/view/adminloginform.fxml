@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="586.0" prefWidth="1272.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.adminlogin.LoginFormController">
+   <children>
+      <Pane layoutX="32.0" layoutY="46.0" prefHeight="524.0" prefWidth="315.0" style="-fx-background-color: FFAB91;" />
+      <ImageView fitHeight="634.0" fitWidth="889.0" layoutX="382.0" layoutY="-6.0" opacity="0.78" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/erer.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="1.0" arcWidth="30.0" fill="#ecc1b0" height="587.0" layoutX="-1.0" layoutY="-1.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="384.0" />
+      <Label alignment="CENTER" layoutX="38.0" layoutY="73.0" prefHeight="25.0" prefWidth="126.0" text="Email">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="49.0" layoutY="184.0" prefHeight="39.0" prefWidth="133.0" text="Password">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtEmail" layoutX="45.0" layoutY="106.0" prefHeight="39.0" prefWidth="294.0" />
+      <PasswordField fx:id="txtPassword" layoutX="43.0" layoutY="223.0" prefHeight="43.0" prefWidth="294.0" />
+      <JFXButton layoutX="43.0" layoutY="329.0" onAction="#btnLoginOnAction" prefHeight="44.0" prefWidth="294.0" style="-fx-background-color: CD5C5C;" text="Sign in" textFill="WHITE">
+         <font>
+            <Font name="Eras Demi ITC" size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="204.0" layoutY="385.0" onAction="#btnRegisterOnAction" prefHeight="20.0" prefWidth="79.0" style="-fx-background-color: CD5C5C;" text="Sign up" textFill="WHITE">
+         <font>
+            <Font name="Eras Demi ITC" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="204.0" layoutY="280.0" onAction="#btnForgotpasswordOnAction" prefHeight="20.0" prefWidth="133.0" text="Forgot Password?">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </JFXButton>
+      <Label alignment="CENTER" layoutX="44.0" layoutY="6.0" opacity="0.57" prefHeight="33.0" prefWidth="294.0" text="Admin Dashboard Login" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="50.0" layoutY="80.0" opacity="0.63" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/img/email.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="52.0" layoutY="196.0" opacity="0.63" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/img/password.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="70.0" layoutY="386.0" prefHeight="25.0" prefWidth="126.0" text="Don't have an account?">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
