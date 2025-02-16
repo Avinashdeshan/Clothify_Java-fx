@@ -4,7 +4,6 @@ import dbconnection.DBConnection;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import model.Employee;
-import model.Supplier;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

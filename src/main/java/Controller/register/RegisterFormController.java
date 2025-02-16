@@ -10,6 +10,7 @@ import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class RegisterFormController {
 
@@ -36,7 +37,7 @@ public class RegisterFormController {
         if (isReg){
             new Alert(Alert.AlertType.INFORMATION,"Customer Registered Succesfully").show();
             Stage stage = new Stage();
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/adminloginform.fxml"))));
+            stage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/adminloginform.fxml")))));
             stage.show();
         }else {
             new Alert(Alert.AlertType.INFORMATION,"Customer Registered Failed").show();

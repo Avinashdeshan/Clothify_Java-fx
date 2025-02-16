@@ -13,5 +13,4 @@ public interface EmployeeService {
     boolean deleteEmployee(String id);
 
     Employee searchEmployee(String id);
-
 }

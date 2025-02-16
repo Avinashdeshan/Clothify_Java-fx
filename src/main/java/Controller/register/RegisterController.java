@@ -34,8 +34,7 @@ public class RegisterController {
                     psTm.setObject(1, username);
                     psTm.setObject(2, email);
                     psTm.setObject(3, basicTextEncryptor.encrypt(password));
-                    boolean b = psTm.executeUpdate() > 0;
-                    return b;
+                    return psTm.executeUpdate() > 0;
                 }
             }
             return false;

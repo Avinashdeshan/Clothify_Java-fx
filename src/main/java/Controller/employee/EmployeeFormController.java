@@ -1,5 +1,6 @@
 package Controller.employee;
 
+import Controller.customer.CustomerController;
 import Controller.supplier.SupplierManagementController;
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
@@ -55,7 +56,7 @@ public class EmployeeFormController implements Initializable {
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
-        boolean isDeleted = EmployeeController.getInstance().deleteEmployee(txtID.getText());
+        boolean isDeleted = CustomerController.getInstance().deleteCustomer(txtEmail.getText());
         new Alert(Alert.AlertType.INFORMATION, isDeleted ? "Employee Deleted Successfully" : "Employee Deletion Failed").show();
         if (isDeleted)
             LoadTable();
