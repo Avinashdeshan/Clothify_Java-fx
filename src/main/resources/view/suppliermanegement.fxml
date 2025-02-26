@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="586.0" prefWidth="1011.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.supplier.SupplierManagementFormController">
+
+   <AnchorPane prefHeight="606.0" prefWidth="1016.0" style="-fx-background-color: linear-gradient(to bottom, #FF5733, #C70039, #900C3F);">
+
+      <VBox layoutX="5.0" layoutY="78.0" prefHeight="500.0" prefWidth="370.0" spacing="15" style="-fx-background-color: rgba(255, 255, 255, 0.2); -fx-border-radius: 20px; -fx-padding: 20; -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 10);">
+         <Label style="-fx-text-fill: white;" text="Supplier ID:">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+         <JFXTextField fx:id="txtID" prefHeight="26.0" prefWidth="299.0" promptText="Enter ID" />
+
+         <Label style="-fx-text-fill: white;" text="Name:">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+         <JFXTextField fx:id="txtName" promptText="Enter Name" />
+
+         <Label style="-fx-text-fill: white;" text="Company:">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+         <JFXTextField fx:id="txtCompany" promptText="Enter Company" />
+
+         <Label style="-fx-text-fill: white;" text="Email:">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+         <JFXTextField fx:id="txtEmail" prefHeight="26.0" prefWidth="299.0" promptText="Enter Email" />
+         <Label style="-fx-text-fill: white;" text="Item:">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Label>
+         <JFXTextField fx:id="txtItem" prefHeight="26.0" prefWidth="299.0" promptText="Enter Item" />
+
+         <HBox prefHeight="34.0" prefWidth="334.0" spacing="15">
+            <JFXButton onAction="#btnAddOnAction" prefHeight="38.0" prefWidth="72.0" style="-fx-background-color: #2ecc71; -fx-text-fill: white;" text="Add">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#btnSearchOnAction" prefHeight="38.0" prefWidth="74.0" style="-fx-background-color: #f39c12; -fx-text-fill: white;" text="Search">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#btnUpdateOnAction" prefHeight="40.0" prefWidth="76.0" style="-fx-background-color: #3498db; -fx-text-fill: white;" text="Update">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#btnDeleteOnAction" prefHeight="40.0" prefWidth="78.0" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" text="Delete">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+         </HBox>
+      </VBox>
+
+      <TableView fx:id="tblSupplier" layoutX="388.0" layoutY="78.0" prefHeight="500.0" prefWidth="607.0" style="-fx-background-color: white;" stylesheets="@../css/Style.css">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="43.20001220703125" text="ID" />
+            <TableColumn fx:id="colName" prefWidth="124.79998779296875" text="Name" />
+            <TableColumn fx:id="colCompany" prefWidth="128.0" text="Company" />
+            <TableColumn fx:id="colEmail" prefWidth="191.2000732421875" text="Email" />
+            <TableColumn fx:id="colItem" prefWidth="119.2000732421875" text="Item" />
+         </columns>
+      </TableView>
+      <Label layoutX="18.0" layoutY="14.0" prefHeight="51.0" prefWidth="394.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Supplier Management" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="40.0" />
+         </font>
+      </Label>
+   </AnchorPane>
+</AnchorPane>

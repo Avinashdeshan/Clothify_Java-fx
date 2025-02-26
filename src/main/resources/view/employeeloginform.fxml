@@ -8,68 +8,42 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.employeelogin.EmployeeLoginFormController">
+<AnchorPane prefHeight="450.0" prefWidth="949.0" style="-fx-background-color: linear-gradient(to right, #ff758c, #ff7eb3);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.employeelogin.EmployeeLoginFormController">
    <children>
-      <AnchorPane prefHeight="585.0" prefWidth="1272.0">
+      <Pane layoutX="22.0" layoutY="50.0" prefHeight="350.0" prefWidth="600.0" style="-fx-background-color: rgba(255, 255, 255, 0.9); -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, #00000033, 10, 0.5, 0, 5);">
          <children>
-            <Pane layoutX="32.0" layoutY="46.0" prefHeight="524.0" prefWidth="315.0" style="-fx-background-color: FFAB91;" />
-            <ImageView fitHeight="634.0" fitWidth="889.0" layoutX="383.0" layoutY="-7.0" opacity="0.78" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="450.0" fitWidth="520.0" layoutX="626.0" layoutY="-50.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../img/erer.jpg" />
+                  <Image url="@../img/kaylin-pacheco-2A-B6BiieEw-unsplash.jpg" />
                </image>
             </ImageView>
-            <Rectangle arcHeight="1.0" arcWidth="30.0" fill="#ecc1b0" height="587.0" layoutX="-1.0" layoutY="-1.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="384.0" />
-            <Label alignment="CENTER" layoutX="38.0" layoutY="73.0" prefHeight="25.0" prefWidth="126.0" text="Email">
-               <font>
-                  <Font name="System Bold" size="21.0" />
-               </font>
+            <Label alignment="CENTER" layoutX="200.0" layoutY="30.0" style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Employee Login" textAlignment="CENTER">
             </Label>
-            <Label alignment="CENTER" layoutX="49.0" layoutY="184.0" prefHeight="39.0" prefWidth="133.0" text="Password">
-               <font>
-                  <Font name="System Bold" size="21.0" />
-               </font>
-            </Label>
-            <JFXTextField fx:id="txtEmail" layoutX="45.0" layoutY="106.0" prefHeight="39.0" prefWidth="294.0" />
-            <PasswordField fx:id="txtPassword" layoutX="43.0" layoutY="223.0" prefHeight="43.0" prefWidth="294.0" />
-            <JFXButton layoutX="43.0" layoutY="329.0" onAction="#btnLoginOnAction" prefHeight="44.0" prefWidth="294.0" style="-fx-background-color: CD5C5C;" text="Sign in" textFill="WHITE">
-               <font>
-                  <Font name="Eras Demi ITC" size="23.0" />
-               </font>
-            </JFXButton>
-            <JFXButton layoutX="204.0" layoutY="385.0" onAction="#btnRegisterOnAction" prefHeight="20.0" prefWidth="79.0" style="-fx-background-color: CD5C5C;" text="Sign up" textFill="WHITE">
-               <font>
-                  <Font name="Eras Demi ITC" size="15.0" />
-               </font>
-            </JFXButton>
-            <JFXButton layoutX="204.0" layoutY="280.0" onAction="#btnForgotpasswordOnAction" prefHeight="20.0" prefWidth="133.0" text="Forgot Password?">
-               <font>
-                  <Font name="Calibri" size="14.0" />
-               </font>
-            </JFXButton>
-            <Label alignment="CENTER" layoutX="38.0" layoutY="6.0" opacity="0.57" prefHeight="33.0" prefWidth="294.0" text="Employee Login" textAlignment="CENTER">
-               <font>
-                  <Font name="System Bold" size="21.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="21.0" fitWidth="20.0" layoutX="50.0" layoutY="80.0" opacity="0.63" pickOnBounds="true" preserveRatio="true">
+
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="60.0" layoutY="100.0">
                <image>
-                  <Image url="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/img/email.png" />
+                  <Image url="@../img/email.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="52.0" layoutY="196.0" opacity="0.63" pickOnBounds="true" preserveRatio="true">
+            <JFXTextField fx:id="txtEmail1" layoutX="100.0" layoutY="95.0" prefHeight="40.0" prefWidth="400.0" promptText="Enter your email" style="-fx-background-radius: 20; -fx-font-size: 16px;">
+            </JFXTextField>
+
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="60.0" layoutY="170.0">
                <image>
-                  <Image url="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/img/password.png" />
+                  <Image url="@../img/password.png" />
                </image>
             </ImageView>
-            <Label alignment="CENTER" layoutX="70.0" layoutY="386.0" prefHeight="25.0" prefWidth="126.0" text="Don't have an account?">
-               <font>
-                  <Font name="System Bold" size="11.0" />
-               </font>
-            </Label>
+            <PasswordField fx:id="txtPassword1" layoutX="100.0" layoutY="165.0" prefHeight="40.0" prefWidth="400.0" promptText="Enter your password" style="-fx-background-radius: 20; -fx-font-size: 16px;">
+            </PasswordField>
+
+            <JFXButton layoutX="100.0" layoutY="240.0" onAction="#btnLoginOnAction" prefHeight="45.0" prefWidth="400.0" style="-fx-background-color: #ff5252; -fx-background-radius: 20; -fx-font-size: 18px; -fx-text-fill: white; -fx-font-weight: bold;">
+               <text>Sign in</text>
+            </JFXButton>
+
+            <JFXButton layoutX="260.0" layoutY="295.0" onAction="#btnForgotpasswordOnAction" style="-fx-font-size: 14px; -fx-text-fill: #777;" text="Forgot Password?">
+            </JFXButton>
          </children>
-      </AnchorPane>
+      </Pane>
    </children>
 </AnchorPane>

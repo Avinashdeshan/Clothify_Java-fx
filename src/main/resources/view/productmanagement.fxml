@@ -1,48 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<?import javafx.collections.FXCollections?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Controller.productmanagement.ProductFormController"
-            prefHeight="400.0" prefWidth="600.0">
-    <VBox spacing="15" alignment="CENTER" style="-fx-padding: 20; -fx-background-color: linear-gradient(to bottom, #ff9a9e, #fad0c4); -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: white; -fx-border-width: 2;">
-
-        <Label text="✨ Add New Product ✨"
-               style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);"/>
-
-        <TextField fx:id="txtName" promptText="🛍️ Product Name"
-                   style="-fx-pref-width: 270px; -fx-font-size: 14px; -fx-background-color: white; -fx-border-color: #ff758c; -fx-border-radius: 5; -fx-padding: 5;"/>
-
-        <ComboBox fx:id="cmbCategory" style="-fx-pref-width: 270px; -fx-font-size: 14px; -fx-background-color: white; -fx-border-color: #ff758c; -fx-border-radius: 5;">
-            <items>
-                <FXCollections fx:factory="observableArrayList">
-                    <String fx:value="👗 Ladies"/>
-                    <String fx:value="👔 Gents"/>
-                    <String fx:value="👶 Kids"/>
-                </FXCollections>
-            </items>
-        </ComboBox>
-
-        <TextField fx:id="txtSize" promptText="📏 Size (e.g., S, M, L)"
-                   style="-fx-pref-width: 270px; -fx-font-size: 14px; -fx-background-color: white; -fx-border-color: #ff758c; -fx-border-radius: 5; -fx-padding: 5;"/>
-
-        <TextField fx:id="txtPrice" promptText="💰 Price (Rs.)"
-                   style="-fx-pref-width: 270px; -fx-font-size: 14px; -fx-background-color: white; -fx-border-color: #ff758c; -fx-border-radius: 5; -fx-padding: 5;"/>
-
-        <TextField fx:id="txtQuantity" promptText="📦 Quantity"
-                   style="-fx-pref-width: 270px; -fx-font-size: 14px; -fx-background-color: white; -fx-border-color: #ff758c; -fx-border-radius: 5; -fx-padding: 5;"/>
-
-        <Button text="➕ Add Product" onAction="#btnAddProductOnAction"
-                style="-fx-background-color: #ff758c; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-pref-width: 270px; -fx-background-radius: 5; -fx-border-radius: 5; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);"/>
-
-    </VBox>
-
-
-
+<AnchorPane prefHeight="608.0" prefWidth="1007.0" style="-fx-background-color: linear-gradient(to bottom, #FF5733, #C70039, #900C3F);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.product.ProductManagementFormController">
+   <children>
+      
+      <TableView fx:id="tblProduct" layoutX="26.0" layoutY="375.0" prefHeight="218.0" prefWidth="954.0" stylesheets="@../css/Style.css">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="88.80001831054688" text="Product ID" />
+            <TableColumn fx:id="colPName" prefWidth="175.20004272460938" text="Product name" />
+            <TableColumn fx:id="colPrice" prefWidth="184.79998779296875" text="Product price" />
+            <TableColumn fx:id="colStock" prefWidth="99.20001220703125" text="Stock" />
+            <TableColumn fx:id="colPSupplier" prefWidth="246.4000244140625" text="Product supplier" />
+            <TableColumn fx:id="colCategory" prefWidth="155.99997558593748" text="category" />
+         </columns>
+      </TableView>
+      <VBox layoutX="27.0" layoutY="74.0" opacity="0.94" prefHeight="286.0" prefWidth="387.0" spacing="10.0" style="-fx-background-color: #1F2937; -fx-background-radius: 5px;">
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <children>
+            <Label prefHeight="27.0" prefWidth="187.0" text="Product Information" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label style="-fx-text-fill: white;" text="Product name:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtName" prefHeight="31.0" prefWidth="246.0" style="-fx-background-radius: 5px; -fx-background-color: FAFAFA;" styleClass="font-color" stylesheets="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/css/login/login.css" />
+            <Label style="-fx-text-fill: white;" text="Product Price:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtProductPrice" prefHeight="26.0" prefWidth="284.0" style="-fx-background-radius: 5px; -fx-background-color: FAFAFA;" styleClass="font-color" stylesheets="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/css/login/login.css" />
+            <Label style="-fx-text-fill: white;" text="Stock:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtProductStock" prefHeight="31.0" prefWidth="246.0" style="-fx-background-radius: 5px; -fx-background-color: FAFAFA;" styleClass="font-color" stylesheets="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/css/login/login.css" />
+         </children>
+      </VBox>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="14.0" prefHeight="46.0" prefWidth="378.0" text="Product Management" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="36.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="475.0" layoutY="74.0" prefHeight="98.0" prefWidth="504.0" spacing="20.0" style="-fx-background-color: #1F2937;">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="68.0" prefWidth="330.0" spacing="4.0">
+               <children>
+                  <Label text="Product Supplier" textFill="#d1d5db" />
+                  <JFXComboBox fx:id="cmbSupplier" prefHeight="26.0" prefWidth="266.0" style="-fx-background-color: FAFAFA;" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" layoutX="187.0" layoutY="10.0" prefHeight="68.0" prefWidth="330.0" spacing="4.0">
+               <children>
+                  <Label text="Product Category" textFill="#d1d5db" />
+                  <JFXComboBox fx:id="cmbCategory" prefHeight="26.0" prefWidth="262.0" style="-fx-background-color: FAFAFA;" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </HBox>
+      <TextField fx:id="searchBar" layoutX="606.0" layoutY="17.0" onKeyPressed="#searchBarOnAction" prefHeight="38.0" prefWidth="208.0" promptText="Search Product" style="-fx-background-color: FAFAFA; -fx-text-fill: #d1d5db;">
+         <padding>
+            <Insets left="25.0" />
+         </padding>
+      </TextField>
+      <JFXComboBox fx:id="cmbCategories" focusColor="#374151" layoutX="827.0" layoutY="19.0" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: FAFAFA; -fx-background-radius: 5px;" unFocusColor="#374151" />
+      <JFXButton layoutX="856.0" layoutY="327.0" onAction="#btnDeleteProductOnAction" prefHeight="36.0" prefWidth="123.0" style="-fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold;                           -fx-background-color: #e84118; -fx-background-radius: 5px; -fx-padding: 8px 14px;" text="Delete" />
+      <JFXButton layoutX="710.0" layoutY="327.0" onAction="#btnAddProductOnAction" prefHeight="36.0" prefWidth="123.0" style="-fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-color: #2563EB; -fx-background-radius: 5px; -fx-padding: 8px 14px;" text="Add product" />
+      <VBox layoutX="475.0" layoutY="177.0" prefHeight="140.0" prefWidth="504.0" spacing="10.0" style="-fx-background-color: #1F2937;">
+         <children>
+            <Label prefHeight="16.0" prefWidth="142.0" text="Product Image" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" prefHeight="46.0" prefWidth="357.0" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="32.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/img/upload.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton onAction="#btnBrowseOnAction" style="-fx-background-color: #2563EB;" text="Browse Files" textFill="WHITE" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </VBox>
+   </children>
 </AnchorPane>

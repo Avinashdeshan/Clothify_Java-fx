@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="594.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.order.OrderFormController">
+<AnchorPane prefHeight="594.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.order.OrderFormController">
    <children>
       <Pane layoutX="27.0" layoutY="95.0" prefHeight="63.0" prefWidth="241.0" style="-fx-background-color: #7ea5c3;" styleClass="dpane_1" stylesheets="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/style.css">
          <children>

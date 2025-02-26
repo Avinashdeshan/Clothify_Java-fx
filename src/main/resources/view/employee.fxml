@@ -5,76 +5,125 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.employee.EmployeeFormController">
-   <children>
-      <ImageView fitHeight="585.0" fitWidth="436.0" layoutX="358.0" layoutY="-2.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/annie-spratt-nWAlCB1tyvc-unsplash.jpg" />
-         </image>
-      </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9a38e" height="585.0" layoutY="-2.0" opacity="0.66" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="358.0" />
-      <JFXTextField fx:id="txtName" layoutX="126.0" layoutY="154.0" prefHeight="43.0" prefWidth="191.0" style="-fx-background-color: #c7ecee;" />
-      <Label layoutX="13.0" layoutY="154.0" prefHeight="43.0" prefWidth="102.0" style="-fx-background-color: #f6e58d;" text="Name :">
+<AnchorPane prefHeight="617.0" prefWidth="1015.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.employee.EmployeeFormController">
+
+   <AnchorPane layoutY="-1.0" prefHeight="617.0" prefWidth="1015.0" style="-fx-background-color: linear-gradient(to bottom, #FF5733, #C70039, #900C3F);">
+      <Label layoutX="26.0" layoutY="88.0" style="-fx-text-fill: white;" text="Employee ID:">
          <font>
-            <Font name="System Bold" size="19.0" />
+            <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="13.0" layoutY="214.0" prefHeight="43.0" prefWidth="102.0" style="-fx-background-color: #f6e58d;" text="Company :">
+      <JFXTextField fx:id="txtID" layoutX="26.0" layoutY="115.0" prefHeight="26.0" prefWidth="299.0" promptText="Enter ID" />
+
+      <Label layoutX="29.0" layoutY="166.0" style="-fx-text-fill: white;" text="Name:">
          <font>
-            <Font name="System Bold" size="19.0" />
+            <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="13.0" layoutY="273.0" prefHeight="43.0" prefWidth="102.0" style="-fx-background-color: #f6e58d;" text="Email :">
+      <JFXTextField fx:id="txtName" layoutX="26.0" layoutY="193.0" promptText="Enter Name" />
+
+      <Label layoutX="26.0" layoutY="243.0" style="-fx-text-fill: white;" text="Company:">
          <font>
-            <Font name="System Bold" size="19.0" />
+            <Font size="18.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtCompany" layoutX="126.0" layoutY="214.0" prefHeight="43.0" prefWidth="191.0" style="-fx-background-color: #c7ecee;" />
-      <JFXTextField fx:id="txtEmail" layoutX="126.0" layoutY="273.0" prefHeight="43.0" prefWidth="191.0" style="-fx-background-color: #c7ecee;" />
-      <JFXButton layoutX="374.0" layoutY="98.0" onAction="#btnAddOnAction" prefHeight="43.0" prefWidth="110.0" style="-fx-background-color: #4834d4;" text="Add" textFill="#f7f7f7">
+      <JFXTextField fx:id="txtCompany" layoutX="26.0" layoutY="270.0" promptText="Enter Company" />
+
+      <Label layoutX="26.0" layoutY="317.0" style="-fx-text-fill: white;" text="Email:">
          <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="374.0" layoutY="214.0" onAction="#btnUpdateOnAction" prefHeight="43.0" prefWidth="110.0" style="-fx-background-color: #44bd32;" text="Update" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="374.0" layoutY="154.0" onAction="#btnSearchOnAction" prefHeight="43.0" prefWidth="110.0" style="-fx-background-color: #fbc531;" text="Search" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="374.0" layoutY="273.0" onAction="#btnDeleteOnAction" prefHeight="43.0" prefWidth="110.0" style="-fx-background-color: #e84118;" text="Delete" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </JFXButton>
-      <Label alignment="CENTER" layoutX="5.0" layoutY="8.0" prefHeight="62.0" prefWidth="351.0" style="-fx-background-color: FFB74D;" text="Employee Management" underline="true">
-         <font>
-            <Font name="Bell MT Bold" size="34.0" />
+            <Font size="18.0" />
          </font>
       </Label>
-      <TableView fx:id="tblEmployee" layoutX="7.0" layoutY="347.0" prefHeight="236.0" prefWidth="733.0" stylesheets="@../css/Style.css">
+      <JFXTextField fx:id="txtEmail" layoutX="26.0" layoutY="344.0" prefHeight="26.0" prefWidth="144.0" promptText="Enter Email" />
+
+      <GridPane hgap="10" layoutX="29.0" layoutY="442.3999938964844" vgap="10">
+         <columnConstraints>
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+         </rowConstraints>
+      </GridPane>
+      <GridPane layoutX="29.0" layoutY="457.6000061035156">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <AnchorPane>
+               <children>
+                  <StackPane>
+                     <children>
+                        <HBox>
+                           <children>
+                              <VBox>
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <VBox />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <JFXButton layoutX="25.0" layoutY="518.0" onAction="#btnAddOnAction" prefHeight="31.0" prefWidth="104.0" style="-fx-background-color: #FFC300; -fx-text-fill: black;" text="Add Employee">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="148.0" layoutY="518.0" onAction="#btnUpdateOnAction" prefHeight="31.0" prefWidth="68.0" style="-fx-background-color: #FF5733; -fx-text-fill: white;" text="Update">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="234.0" layoutY="518.0" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="62.0" style="-fx-background-color: #900C3F; -fx-text-fill: white;" text="Delete">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="316.0" layoutY="518.0" onAction="#btnSearchOnAction" prefHeight="31.0" prefWidth="56.0" style="-fx-background-color: #EA580C; -fx-text-fill: white;" text="Search">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="51.0" prefWidth="422.0" style="-fx-text-fill: white; -fx-font-weight: bold;" text="Employee Management" textFill="WHITE">
+         <font>
+            <Font name="Bell MT Bold" size="40.0" />
+         </font>
+      </Label>
+
+      <TableView fx:id="tblEmployee" layoutX="404.0" layoutY="88.0" prefHeight="473.0" prefWidth="592.0" stylesheets="@../css/Style.css">
          <columns>
-            <TableColumn fx:id="colId" prefWidth="70.39999580383301" text="ID" />
-            <TableColumn fx:id="colName" prefWidth="157.60002899169922" text="Name" />
-            <TableColumn fx:id="colcompany" prefWidth="206.39996337890625" text="Company" />
-            <TableColumn fx:id="colEmail" prefWidth="301.5999694824219" text="Email" />
+            <TableColumn fx:id="colId" minWidth="0.0" prefWidth="72.00003051757812" text="ID" />
+            <TableColumn fx:id="colName" prefWidth="129.5999755859375" text="Name" />
+            <TableColumn fx:id="colCompany" prefWidth="211.2000732421875" text="Company" />
+            <TableColumn fx:id="colEmail" prefWidth="227.19998779296873" text="Email" />
          </columns>
       </TableView>
-      <JFXTextField fx:id="txtID" layoutX="126.0" layoutY="98.0" prefHeight="43.0" prefWidth="191.0" style="-fx-background-color: #c7ecee;" />
-      <Label layoutX="13.0" layoutY="98.0" prefHeight="43.0" prefWidth="102.0" style="-fx-background-color: #f6e58d;" text="Id :">
+      <Label layoutX="26.0" layoutY="393.0" style="-fx-text-fill: white;" text="Password:">
          <font>
-            <Font name="System Bold" size="19.0" />
+            <Font size="18.0" />
          </font>
       </Label>
-   </children>
+      <JFXTextField fx:id="txtPassword" layoutX="26.0" layoutY="420.0" prefHeight="26.0" prefWidth="144.0" promptText="Enter Password" />
+   </AnchorPane>
 </AnchorPane>

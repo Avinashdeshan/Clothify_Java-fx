@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="616.0" prefWidth="1008.0" style="-fx-background-color: linear-gradient(to bottom, #FF5733, #C70039, #900C3F);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.customerhome.CustomerHomeFormController">
+
+    <children>
+        <Label layoutX="28.0" layoutY="14.0" prefHeight="66.0" prefWidth="301.0" style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;" text="Customer Management" textFill="WHITE">
+         <font>
+            <Font name="Bell MT" size="14.0" />
+         </font></Label>
+
+        <JFXButton layoutX="858.0" layoutY="92.0" onAction="#btnAddCustomerOnAction" style="-fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold;                           -fx-background-color: #4F46E5; -fx-background-radius: 5px; -fx-padding: 8px 14px;" text="Add Customer" />
+
+        <HBox layoutX="650.0" layoutY="24.0" spacing="10.0" style="-fx-background-color: rgba(255, 255, 255, 0.2); -fx-background-radius: 5px; -fx-padding: 10px;">
+            <children>
+                <TextField fx:id="txtSearchCustomerBar" onKeyTyped="#txtSearchCustomer" promptText="Search Customer" style="-fx-background-color: white; -fx-text-fill: black;                                   -fx-prompt-text-fill: gray; -fx-border-radius: 5px;" />
+                <JFXComboBox fx:id="cmbStatus" prefWidth="150.0" style="-fx-background-color: white; -fx-text-fill: black;                                     -fx-border-radius: 5px;" />
+            </children>
+        </HBox>
+
+        <TableView fx:id="tblCustomer" layoutX="28.0" layoutY="366.0" prefHeight="235.0" prefWidth="954.0" stylesheets="@../css/Style.css">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="59.19997787475586" text="ID" />
+                <TableColumn fx:id="colFirstname" prefWidth="106.39996337890625" text="Firstname" />
+                <TableColumn fx:id="colLastname" prefWidth="113.59992980957031" text="Lastname" />
+                <TableColumn fx:id="colEmail" prefWidth="348.8000183105469" text="Email" />
+                <TableColumn fx:id="colCity" prefWidth="164.79998779296875" text="City" />
+            <TableColumn fx:id="colPostalcode" prefWidth="157.5999755859375" text="Postalcode" />
+            </columns>
+        </TableView>
+
+        <JFXButton layoutX="858.0" layoutY="147.0" onAction="#btnDeleteCustomerOnAction" prefHeight="36.0" prefWidth="123.0" style="-fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold;                           -fx-background-color: #e84118; -fx-background-radius: 5px; -fx-padding: 8px 14px;" text="Delete" />
+
+        <JFXButton layoutX="858.0" layoutY="203.0" onAction="#btnUpdateCustomerOnAction" prefHeight="36.0" prefWidth="123.0" style="-fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold;                           -fx-background-color: #44bd32; -fx-background-radius: 5px; -fx-padding: 8px 14px;" text="Update" />
+      <VBox layoutX="28.0" layoutY="92.0" opacity="0.94" prefHeight="258.0" prefWidth="387.0" spacing="10.0" style="-fx-background-color: #1F2937; -fx-background-radius: 5px;">
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <children>
+            <Label prefHeight="27.0" prefWidth="187.0" text="Basic Information" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label style="-fx-text-fill: white;" text="Employee ID:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtID" prefHeight="31.0" prefWidth="246.0" style="-fx-background-radius: 5px;" styleClass="font-color" stylesheets="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/css/login/login.css" />
+            <Label style="-fx-text-fill: white;" text="First Name:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFirstName" prefHeight="26.0" prefWidth="284.0" style="-fx-background-radius: 5px;" styleClass="font-color" stylesheets="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/css/login/login.css" />
+            <Label style="-fx-text-fill: white;" text="Last Name:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtLastName" prefHeight="31.0" prefWidth="246.0" style="-fx-background-radius: 5px;" styleClass="font-color" stylesheets="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/css/login/login.css" />
+         </children>
+      </VBox>
+      <VBox layoutX="445.0" layoutY="92.0" opacity="0.94" prefHeight="258.0" prefWidth="387.0" spacing="10.0" style="-fx-background-color: #1F2937; -fx-background-radius: 5px;">
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <children>
+            <Label text="Contact Information" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label style="-fx-text-fill: white;" text="Email:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtEmail" prefHeight="31.0" prefWidth="246.0" style="-fx-background-radius: 5px;" styleClass="font-color" />
+            <Label style="-fx-text-fill: white;" text="City:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCity" prefHeight="26.0" prefWidth="284.0" style="-fx-background-radius: 5px;" styleClass="font-color" stylesheets="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/css/login/login.css" />
+            <Label style="-fx-text-fill: white;" text="Postalcode:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPostalCode" prefHeight="31.0" prefWidth="246.0" style="-fx-background-radius: 5px;" styleClass="font-color" stylesheets="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/css/login/login.css" />
+         </children>
+      </VBox>
+
+    </children>
+</AnchorPane>

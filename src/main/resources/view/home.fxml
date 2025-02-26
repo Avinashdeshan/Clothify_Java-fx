@@ -11,22 +11,26 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="590.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.home.HomeFormController">
+<AnchorPane prefHeight="590.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.home.HomeFormController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9a38e" height="600.0" layoutX="-2.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="302.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ecc1b0" height="600.0" layoutX="298.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="302.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d77852" height="79.0" layoutX="104.0" layoutY="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="380.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="linear-gradient(to right, #ff9966, #ff5e62)" height="600.0" layoutX="-2.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="302.0" />
+
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="linear-gradient(to bottom, #FF5733, #C70039, #900C3F)" height="600.0" layoutX="298.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="302.0" />
+
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="linear-gradient(to right, #ff9966, #ff5e62)" height="79.0" layoutX="104.0" layoutY="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="380.0" />
       <Label alignment="CENTER" layoutX="82.0" layoutY="33.0" prefHeight="66.0" prefWidth="418.0" text="Clothify Store" textFill="WHITE">
          <font>
             <Font name="Lucida Bright Demibold Italic" size="53.0" />
          </font>
       </Label>
+
       <ImageView fitHeight="600.0" fitWidth="405.0" layoutX="600.0" layoutY="-2.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/alexandra-gorn-WF0LSThlRmw-unsplash.jpg" />
          </image>
       </ImageView>
-      <VBox alignment="TOP_CENTER" layoutX="45.0" layoutY="153.0" prefHeight="332.0" prefWidth="208.0" style="-fx-background-color: #1F2937; -fx-background-radius: 10px;">
+
+      <VBox alignment="TOP_CENTER" layoutX="45.0" layoutY="153.0" prefHeight="332.0" prefWidth="208.0" style="-fx-background-color: #FF5733; -fx-background-radius: 10px;">
          <children>
             <ImageView fitHeight="56.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -41,7 +45,8 @@
                   <Insets top="3.0" />
                </VBox.margin>
             </Label>
-            <Label text="Access administrative controls" textFill="#9ca3af" />
+            <Label text="Access administrative controls" textFill="#D5DBDB" />
+
             <VBox prefHeight="82.0" prefWidth="290.0" spacing="9.0">
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="13.0" prefWidth="290.0" spacing="8.0">
@@ -51,7 +56,7 @@
                               <Image url="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/img/blue-tic.png" />
                            </image>
                         </ImageView>
-                        <Label text="Manage Orders &amp; Inventory" textFill="#9ca3af" />
+                        <Label text="Manage Orders &amp; Inventory" textFill="#D5DBDB" />
                      </children>
                      <padding>
                         <Insets left="20.0" />
@@ -64,7 +69,7 @@
                               <Image url="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/img/blue-tic.png" />
                            </image>
                         </ImageView>
-                        <Label text="User Management" textFill="#9ca3af" />
+                        <Label text="User Management" textFill="#D5DBDB" />
                      </children>
                      <padding>
                         <Insets left="20.0" />
@@ -77,7 +82,7 @@
                               <Image url="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/img/blue-tic.png" />
                            </image>
                         </ImageView>
-                        <Label text="Product &amp; Supplier Control" textFill="#9ca3af" />
+                        <Label text="Product &amp; Supplier Control" textFill="#D5DBDB" />
                      </children>
                      <padding>
                         <Insets left="20.0" />
@@ -90,21 +95,16 @@
                               <Image url="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/img/blue-tic.png" />
                            </image>
                         </ImageView>
-                        <Label text="View Reports" textFill="#9ca3af" />
+                        <Label text="View Reports" textFill="#D5DBDB" />
                      </children>
                      <padding>
                         <Insets left="20.0" />
                      </padding>
                   </HBox>
                </children>
-               <VBox.margin>
-                  <Insets top="28.0" />
-               </VBox.margin>
-               <padding>
-                  <Insets left="8.0" />
-               </padding>
             </VBox>
-            <JFXButton onAction="#btnLogAsAdminOnAction" prefHeight="34.0" prefWidth="229.0" style="-fx-background-radius: 6px; -fx-background-color: #2563EB;" text="Login as Admin" textFill="WHITE">
+
+            <JFXButton onAction="#btnLogAsAdminOnAction" prefHeight="34.0" prefWidth="229.0" style="-fx-background-radius: 6px; -fx-background-color: #BD081C;" text="Login as Admin" textFill="WHITE">
                <padding>
                   <Insets bottom="8.0" top="8.0" />
                </padding>
@@ -116,11 +116,9 @@
                </font>
             </JFXButton>
          </children>
-         <padding>
-            <Insets bottom="15.0" top="15.0" />
-         </padding>
       </VBox>
-      <VBox alignment="TOP_CENTER" layoutX="345.0" layoutY="153.0" prefHeight="332.0" prefWidth="208.0" style="-fx-background-color: #1F2937; -fx-background-radius: 10px;">
+
+      <VBox alignment="TOP_CENTER" layoutX="345.0" layoutY="153.0" prefHeight="332.0" prefWidth="208.0" style="-fx-background-color: #C70039; -fx-background-radius: 10px;">
          <children>
             <ImageView fitHeight="56.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -135,7 +133,8 @@
                   <Insets top="3.0" />
                </VBox.margin>
             </Label>
-            <Label text="Access order management" textFill="#9ca3af" />
+            <Label text="Access order management" textFill="#D5DBDB" />
+
             <VBox prefHeight="95.0" prefWidth="290.0" spacing="9.0">
                <children>
                   <HBox alignment="CENTER_LEFT" prefHeight="13.0" prefWidth="290.0" spacing="8.0">
@@ -145,7 +144,7 @@
                               <Image url="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/img/green-tic.png" />
                            </image>
                         </ImageView>
-                        <Label text="Place Customer Orders" textFill="#9ca3af" />
+                        <Label text="Manage Stock" textFill="#D5DBDB" />
                      </children>
                      <padding>
                         <Insets left="20.0" />
@@ -158,34 +157,16 @@
                               <Image url="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/img/green-tic.png" />
                            </image>
                         </ImageView>
-                        <Label text="Browse Product Categories" textFill="#9ca3af" />
-                     </children>
-                     <padding>
-                        <Insets left="20.0" />
-                     </padding>
-                  </HBox>
-                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="28.0" prefHeight="13.0" prefWidth="290.0" spacing="8.0">
-                     <children>
-                        <ImageView fitHeight="15.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/img/green-tic.png" />
-                           </image>
-                        </ImageView>
-                        <Label text="Manage Customer Details" textFill="#9ca3af" />
+                        <Label text="View Order Status" textFill="#D5DBDB" />
                      </children>
                      <padding>
                         <Insets left="20.0" />
                      </padding>
                   </HBox>
                </children>
-               <VBox.margin>
-                  <Insets top="28.0" />
-               </VBox.margin>
-               <padding>
-                  <Insets left="8.0" />
-               </padding>
             </VBox>
-            <JFXButton onAction="#btnLogAsEmployeeOnAction" prefHeight="34.0" prefWidth="229.0" style="-fx-background-radius: 6px; -fx-background-color: #16A34A;" text="Login as Employee" textFill="WHITE">
+
+            <JFXButton onAction="#btnLogAsEmployeeOnAction" prefHeight="34.0" prefWidth="229.0" style="-fx-background-radius: 6px; -fx-background-color: BD081C;" text="Login as Employee" textFill="WHITE">
                <padding>
                   <Insets bottom="8.0" top="8.0" />
                </padding>
@@ -197,9 +178,6 @@
                </font>
             </JFXButton>
          </children>
-         <padding>
-            <Insets bottom="15.0" top="15.0" />
-         </padding>
       </VBox>
    </children>
 </AnchorPane>

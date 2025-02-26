@@ -1,69 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXPasswordField?>
-<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="552.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.otp.OtpFormController">
+<AnchorPane prefHeight="552.0" prefWidth="438.0" style="-fx-background-color: FF4343;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.otp.OtpFormController">
    <children>
-      <ImageView fitHeight="593.0" fitWidth="847.0" layoutX="-1.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/megan-lee-3BF8aytKNGY-unsplash.jpg" />
-         </image>
-      </ImageView>
-      <Pane layoutX="54.0" layoutY="113.0" prefHeight="348.0" prefWidth="390.0" style="-fx-background-color: #ecc1b0;" stylesheets="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/style.css">
+      <Pane layoutX="47.0" layoutY="20.0" minWidth="-Infinity" prefHeight="510.0" prefWidth="340.0" style="-fx-background-color: #1F2937; -fx-background-radius: 12px;">
          <children>
-            <Label layoutX="14.0" layoutY="15.0" prefHeight="29.0" prefWidth="158.0" text="Enter Email">
+            <ImageView fitHeight="31.0" fitWidth="30.0" layoutX="16.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/img/lock.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="46.0" layoutY="24.0" prefHeight="30.0" prefWidth="182.0" text="Forgot Password ?" textFill="WHITE">
                <font>
-                  <Font name="Century Gothic Bold" size="18.0" />
+                  <Font name="Arial Bold" size="19.0" />
                </font>
             </Label>
-            <JFXTextField fx:id="txtEmail" focusColor="BLACK" layoutX="14.0" layoutY="43.0" prefHeight="40.0" prefWidth="210.0" unFocusColor="#14334e">
+            <TextField id="#inputFld" fx:id="txtEmail" layoutX="56.0" layoutY="96.0" prefHeight="36.0" prefWidth="239.0" promptText="Email address" style="-fx-background-color: #374151; -fx-text-fill: #9CA3AF;" styleClass="font-color" stylesheets="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/css/login/login.css">
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </TextField>
+            <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="67.0" layoutY="106.0" opacity="0.63" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/img/email.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="28.0" layoutY="152.0" onAction="#btnSendOTPOnAction" prefHeight="21.0" prefWidth="274.0" style="-fx-background-color: #4F46E5;" text="Send request link" textFill="WHITE">
+               <padding>
+                  <Insets bottom="8.0" top="8.0" />
+               </padding>
                <font>
-                  <Font name="Century Gothic" size="12.0" />
+                  <Font name="System Bold" size="12.0" />
                </font>
-            </JFXTextField>
-            <Label layoutX="14.0" layoutY="229.0" prefHeight="29.0" prefWidth="158.0" text="Enter Code">
-               <font>
-                  <Font name="Century Gothic Bold" size="18.0" />
-               </font>
-            </Label>
-            <JFXButton alignment="CENTER" layoutX="230.0" layoutY="35.0" onAction="#btnSendOnAction" prefHeight="56.0" prefWidth="138.0" style="-fx-background-color: #dcada3;" styleClass="btn" stylesheets="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/style.css" text="Send Otp" textAlignment="CENTER">
-               <font>
-                  <Font name="Century Gothic Bold" size="12.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="38.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/img/icons8-login-100.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
             </JFXButton>
-            <JFXPasswordField fx:id="txtCode" focusColor="BLACK" layoutX="14.0" layoutY="259.0" prefHeight="40.0" prefWidth="203.0">
+            <ImageView fitHeight="17.0" fitWidth="19.0" layoutX="100.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/img/send.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtOTP1" layoutX="80.0" layoutY="255.0" prefHeight="26.0" prefWidth="29.0" style="-fx-background-color: #374151; -fx-text-fill: white;" />
+            <TextField fx:id="txtOTP2" layoutX="128.0" layoutY="255.0" prefHeight="26.0" prefWidth="29.0" style="-fx-background-color: #374151; -fx-text-fill: white;" />
+            <TextField fx:id="txtOTP3" layoutX="175.0" layoutY="255.0" prefHeight="26.0" prefWidth="29.0" style="-fx-background-color: #374151; -fx-text-fill: white;" />
+            <TextField fx:id="txtOTP4" layoutX="222.0" layoutY="255.0" prefHeight="26.0" prefWidth="29.0" style="-fx-background-color: #374151; -fx-text-fill: white;" />
+            <JFXButton fx:id="btnVerify" layoutX="233.0" layoutY="319.0" onAction="#btnVerifyOnAction" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #4F46E5;" text="Verify" textFill="WHITE">
+               <padding>
+                  <Insets bottom="4.0" top="4.0" />
+               </padding>
                <font>
-                  <Font name="Century Gothic" size="12.0" />
+                  <Font name="System Bold" size="12.0" />
                </font>
-            </JFXPasswordField>
-            <JFXButton alignment="CENTER" layoutX="230.0" layoutY="244.0" onAction="#btnSubmitOnAction" prefHeight="56.0" prefWidth="138.0" style="-fx-background-color: #737479;" styleClass="btn" stylesheets="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/style.css" text="Submit" textAlignment="CENTER">
-               <font>
-                  <Font name="Century Gothic Bold" size="12.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../clothify-store-master/clothify-store-master/src/main/resources/view/img/icons8-login-100.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
             </JFXButton>
+            <TextField id="#inputFld" fx:id="txtNewPassword" editable="false" layoutX="46.0" layoutY="358.0" prefHeight="36.0" prefWidth="239.0" promptText="New password" style="-fx-background-color: #374151; -fx-text-fill: #9CA3AF;" styleClass="font-color" stylesheets="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/css/login/login.css">
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </TextField>
+            <TextField id="#inputFld" fx:id="txtConfirmPassword" editable="false" layoutX="46.0" layoutY="406.0" prefHeight="36.0" prefWidth="239.0" promptText="Confirm password" style="-fx-background-color: #374151; -fx-text-fill: #9CA3AF;" styleClass="font-color" stylesheets="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/css/login/login.css">
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </TextField>
+            <JFXButton fx:id="btnConfirm" layoutX="28.0" layoutY="459.0" onAction="#btnConfirmOnAction" prefHeight="21.0" prefWidth="274.0" style="-fx-background-color: #6366F1;" text="Confirm recovery" textFill="WHITE">
+               <padding>
+                  <Insets bottom="8.0" top="8.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="39.0" layoutY="72.0" opacity="0.57" text="Enter your email address to recover your account" textFill="WHITE" />
          </children>
       </Pane>
    </children>
