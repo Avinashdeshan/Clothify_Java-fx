@@ -8,56 +8,45 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="602.0" prefWidth="1415.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.dashboard.DashboardFormController">
+<AnchorPane prefHeight="666.0" prefWidth="1282.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.dashboard.DashboardFormController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9a38e" height="603.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="254.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ecc1b0" height="603.0" layoutX="254.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="857.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d77852" height="78.0" layoutX="4.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="246.0" />
+
+      <Rectangle arcHeight="15.0" arcWidth="15.0" fill="linear-gradient(to bottom, #FF5733, #C70039, #900C3F)" height="665.0" strokeType="INSIDE" width="254.0" />
+
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="linear-gradient(to right, #ff9966, #ff5e62)" height="78.0" layoutX="4.0" layoutY="14.0" strokeType="INSIDE" width="246.0" />
+
       <Label alignment="CENTER" layoutY="20.0" prefHeight="66.0" prefWidth="246.0" text="Clothify Store" textFill="WHITE">
          <font>
-            <Font name="Lucida Bright Demibold Italic" size="34.0" />
+            <Font name="Arial Bold Italic" size="28.0" />
          </font>
       </Label>
-      <JFXButton buttonType="RAISED" layoutX="91.0" layoutY="144.0" onAction="#btnHomeOnAction" prefHeight="52.0" prefWidth="72.0" text="Home">
-         <font>
-            <Font name="System Bold" size="17.0" />
-         </font>
+
+      <JFXButton layoutX="50.0" layoutY="120.0" onAction="#btnHomeOnAction" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #ff5e62; -fx-text-fill: white; -fx-font-size: 16px; -fx-background-radius: 10;" text="🏠 Home">
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="41.0" layoutY="196.0" onAction="#btnAddSupplierOnAction" prefHeight="52.0" prefWidth="172.0" text="Manage Supplier">
-         <font>
-            <Font name="System Bold" size="17.0" />
-         </font>
+
+      <JFXButton layoutX="50.0" layoutY="191.0" onAction="#btnAddSupplierOnAction" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #ff5e62; -fx-text-fill: white; -fx-font-size: 16px; -fx-background-radius: 10;" text="📦 Manage Supplier">
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="70.0" layoutY="300.0" onAction="#btnPlaceOrderOnAction" prefHeight="52.0" prefWidth="115.0" text="Place Order">
-         <font>
-            <Font name="System Bold" size="17.0" />
-         </font>
+
+      <JFXButton layoutX="50.0" layoutY="262.0" onAction="#btnAddEmployeeOnAction" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #ff5e62; -fx-text-fill: white; -fx-font-size: 16px; -fx-background-radius: 10;" text="👨‍💼 Manage Employee">
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="26.0" layoutY="352.0" onAction="#btnProductDetailsOnAction" prefHeight="52.0" prefWidth="202.0" text="Product Management">
-         <font>
-            <Font name="System Bold" size="17.0" />
-         </font>
+
+      <JFXButton layoutX="50.0" layoutY="332.0" onAction="#btnProductDetailsOnAction" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #ff5e62; -fx-text-fill: white; -fx-font-size: 16px; -fx-background-radius: 10;" text="📋 Product Managemt">
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="59.0" layoutY="404.0" onAction="#btnOrderHistoryOnAction" prefHeight="52.0" prefWidth="135.0" text="Order History">
-         <font>
-            <Font name="System Bold" size="17.0" />
-         </font>
+
+      <JFXButton layoutX="48.0" layoutY="588.0" onAction="#btnLogoutOnAction" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #900C3F; -fx-text-fill: white; -fx-font-size: 16px; -fx-background-radius: 10;" text="🚪 Log Out">
       </JFXButton>
-      <ImageView fitHeight="602.0" fitWidth="406.0" layoutX="1033.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/kaylin-pacheco-2A-B6BiieEw-unsplash.jpg" />
-         </image>
-      </ImageView>
-      <JFXButton buttonType="RAISED" layoutX="79.0" layoutY="534.0" onAction="#btnLogoutOnAction" prefHeight="52.0" prefWidth="95.0" text="Log Out">
-         <font>
-            <Font name="System Bold" size="17.0" />
-         </font>
+
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="linear-gradient(to bottom, #ffd89b, #19547b)" height="665.0" layoutX="254.0" strokeType="INSIDE" width="1069.0" />
+      <JFXButton layoutX="48.0" layoutY="467.0" onAction="#btnAddSettingOnAction" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #ff5e62; -fx-text-fill: white; -fx-font-size: 16px; -fx-background-radius: 10;" text="Settings">
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="19.0" opacity="0.63" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../ClothifyStoreManagement-main/clothify-JavaFx/src/main/resources/img/settings.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="41.0" layoutY="248.0" onAction="#btnAddEmployeeOnAction" prefHeight="52.0" prefWidth="172.0" text="Manage Employee">
-         <font>
-            <Font name="System Bold" size="17.0" />
-         </font>
-      </JFXButton>
-      <AnchorPane fx:id="loadDashboard" layoutX="269.0" layoutY="15.0" prefHeight="574.0" prefWidth="816.0" />
+      <AnchorPane fx:id="loadDashboard" layoutX="289.0" layoutY="26.0" prefHeight="604.0" prefWidth="996.0" />
+      <JFXButton layoutX="52.0" layoutY="399.0" onAction="#btnAddCustomerOnAction" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #ff5e62; -fx-text-fill: white; -fx-font-size: 16px; -fx-background-radius: 10;" text="📦 Manage Customer" />
    </children>
 </AnchorPane>
